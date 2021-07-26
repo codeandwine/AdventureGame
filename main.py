@@ -19,10 +19,9 @@ def intro():
 	print_sleep("(Please enter the numbers 1 or 2.)")
 
 	start = input()
-
-	if start == 1:
+	if start == '1':
 		knock_on_door()
-	elif start == 2:
+	elif start == '2':
 		peep()
 
 
@@ -38,9 +37,9 @@ def knock_on_door():
 
 	first_step = input()
 
-	if first_step == 1:
+	if first_step == '1':
 		pierce_heart()
-	elif first_step == 2:
+	elif first_step == '2':
 		run_away()
 
 def pierce_heart():
@@ -60,3 +59,5 @@ def pierce_heart():
 
 def bye():
 	print_sleep("Thanks for playing! See you next time. :)")
+
+intro()
