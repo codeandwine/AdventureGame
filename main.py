@@ -10,7 +10,8 @@ def print_sleep(message):
 	time.sleep(1.5) #change this line for the pauses
 
 def intro(weapon):
-	print_sleep("You find you are in the Jungles of Belize, filled with Mayan witchcraft and supernatural creatures.")
+	print_sleep("You find you are in the Jungles of Belize, filled with Mayan "
+				"witchcraft and supernatural creatures.")
 	print_sleep("Rumor has it that an evil sprit is still roaming the mountains.")
 	print_sleep("In front of you is a Mayan Temple.")
 	print_sleep("Beside the temple there is a roaring river.")
@@ -35,7 +36,8 @@ def options(weapon):
 def knock_on_door(weapon):
 	first_step = '0'
 	print_sleep("You walk towards the weird door at the top of the Temple.")
-	print_sleep(f"You are about to reach the door when a grotesque looking {enemy} opens the door.")
+	print_sleep(f"You are about to reach the door when a grotesque looking "
+				f"{enemy} opens the door.")
 	print_sleep("Holy Molly! This is the evil spirit encarnate!")
 	print_sleep(f"The ugly {enemy} attacks you. You are quite frightened about this!")
 	print_sleep("What should you do?")
@@ -51,11 +53,11 @@ def knock_on_door(weapon):
 def drink_water(weapon):
 	if weapon == "Magical Sword":
 		print_sleep("You have been here before. You already found the Magical "
-					" sword. You drink some water.")
+					"sword. You drink some water.")
 	else:
 		print_sleep("You walk towards the river bank. ")
-		print_sleep("As you are you bend down to drink, you see something glistening")
-		print_sleep(" in the water. You have found a magical sword!")
+		print_sleep("As you bend down to drink, you see something glistening "
+					"in the water. You have found a magical sword!")
 		print_sleep("You rid yourself of your hatchet and take the sword.")
 		weapon = "Magical Sword"
 
@@ -66,9 +68,9 @@ def pierce_heart(weapon):
 	play_again = "x"
 
 	if weapon == "Magical Sword":
-		print_sleep(f"As the {enemy} makes a move at you, you take the {weapon}",
-					" and pierce his heart.")
-		print_sleep("The body collapses and the spirit ",
+		print_sleep(f"As the {enemy} makes a move at you, you take the {weapon} "
+					"and pierce his heart.")
+		print_sleep("The body collapses and the spirit "
 					"is thrown down into the underworld.")
 		print_sleep("You have rid the Mayan Temple of the evil spirit!")
 		print_sleep("You have won!")
