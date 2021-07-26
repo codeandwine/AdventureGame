@@ -22,15 +22,15 @@ def options(weapon):
 	start = '0'
 	print_sleep("Enter 1 to knock on the door of the Mayan Temple.")
 	print_sleep("Enter 2 to drink some water from the river.")
-	print_sleep("(Please enter the numbers 1 or 2.)")
 
-	start = input()
-	if start == '1':
-		knock_on_door(weapon)
-	elif start == '2':
-		drink_water(weapon)
-	else:
-		"You didn't enter the numbers specified!"
+	while start not in ['1', '2']:
+		start = input("(Please enter the numbers 1 or 2.)\n")
+
+		if start == '1':
+			knock_on_door(weapon)
+		elif start == '2':
+			drink_water(weapon)
+
 
 
 def knock_on_door(weapon):
@@ -66,7 +66,7 @@ def drink_water(weapon):
 
 def run_away(weapon):
 	print_sleep("You run back to where you started in the Jungle of Belize!")
-	print_sleep(f"Luckily the {enemy} didn't follow you.")
+	print_sleep(f"Luckily the {enemy} didn't follow you.\n")
 	options(weapon)
 
 def pierce_heart(weapon):
@@ -85,13 +85,15 @@ def pierce_heart(weapon):
 		print_sleep("He possesses your body and steals your soul!")
 		print_sleep("You have been defeated! :(")
 
-	print_sleep("Would you like to play again? (y/n)")
-	play_again = input()
-	if play_again == 'y':
-		weapon = "Hatchet"
-		intro(weapon)
-	elif play_again == 'n':
-		bye()
+	while play_again not in ['y', 'n']:
+		play_again = input("Would you like to play again? (y/n)\n").lower()
+
+		if play_again == 'y':
+			print_sleep("Fantastic! Let's take you back...\n")
+			weapon = "Hatchet"
+			intro(weapon)
+		elif play_again == 'n':
+			bye()
 
 def bye():
 	print_sleep("Thanks for playing! See you next time. :)")
