@@ -38,9 +38,9 @@ def knock_on_door():
 	print_sleep("You walk towards the weird door at the top of the Temple.")
 	print_sleep(f"You are about to reach the door when a grotesque looking {enemy} opens the door.")
 	print_sleep("Holy Molly! This is the evil spirit encarnate!")
-	print_sleep(f"The ugly {enemy} attacks you. You are quite unprepared for this!")
+	print_sleep(f"The ugly {enemy} attacks you. You are quite frightened about this!")
 	print_sleep("What should you do?")
-	print_sleep("1. Use the hatchet to pierce his heart.")
+	print_sleep(f"1. Use the {weapon}} to pierce his heart.")
 	print_sleep("2. RUN AWAY!")
 
 	first_step = input()
