@@ -15,6 +15,7 @@ This a simple project that tests the following skills being used:
 ## 4. print and 'f' prints
 
 <br>
+
 ## 5. while loop usage with implicit joining for list provided
 
 <br>
@@ -25,6 +26,6 @@ This a simple project that tests the following skills being used:
 
 <br>
 ## 8. pycodestyle checks done
-![pycheck.png](https://github.com/codeandwine/AdventureGame/blob/master/key1.png)
+![pycheck.png](https://github.com/codeandwine/AdventureGame/blob/main/pycheck.png)
 <br>
 ## 9. Running from start to finish without crashing
