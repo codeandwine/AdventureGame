@@ -64,6 +64,11 @@ def drink_water(weapon):
 	print_sleep("You head back to the jungle.\n")
 	options(weapon)
 
+def run_away(weapon):
+	print_sleep("You run back to where you started in the Jungle of Belize!")
+	print_sleep(f"Luckily the {enemy} didn't follow you.")
+	options(weapon)
+
 def pierce_heart(weapon):
 	play_again = "x"
 
