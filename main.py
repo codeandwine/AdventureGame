@@ -17,6 +17,9 @@ def intro():
 	print_sleep("In front of you is a Mayan Temple.")
 	print_sleep("Beside the temple there is a roaring river.")
 	print_sleep("In your hand you hold a hatchet, though it's a bit blunt.")
+	options()
+
+def options():
 	print_sleep("Enter 1 to knock on the door of the Mayan Temple.")
 	print_sleep("Enter 2 to drink some water from the river.")
 	print_sleep("(Please enter the numbers 1 or 2.)")
@@ -26,6 +29,8 @@ def intro():
 		knock_on_door()
 	elif start == '2':
 		drink_water()
+	else:
+		"You didn't enter the numbers specified!"
 
 
 def knock_on_door():
