@@ -57,3 +57,6 @@ def pierce_heart():
 		intro()
 	elif play_again == 'n':
 		bye()
+
+def bye():
+	print_sleep("Thanks for playing! See you next time. :)")
