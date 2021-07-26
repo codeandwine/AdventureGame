@@ -44,11 +44,13 @@ def knock_on_door(weapon):
 	print_sleep(f"1. Use the {weapon} to pierce his heart.")
 	print_sleep("2. RUN AWAY!")
 
-	first_step = input()
-	if first_step == '1':
-		pierce_heart(weapon)
-	elif first_step == '2':
-		run_away(weapon)
+	while first_step not in ['1', '2']:
+		first_step = input("(Please enter the numbers 1 or 2.)\n")
+		
+		if first_step == '1':
+			pierce_heart(weapon)
+		elif first_step == '2':
+			run_away(weapon)
 
 def drink_water(weapon):
 	if weapon == "Magical Sword":
