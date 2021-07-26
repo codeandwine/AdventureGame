@@ -15,7 +15,7 @@ def intro():
 	print_sleep("Rumor has it that an evil sprit is still roaming the mountains.")
 	print_sleep("In front of you is a Mayan Temple.")
 	print_sleep("Beside the temple there is a roaring river.")
-	print_sleep("In your hand you hold a hatchet, though it's a bit blunt.")
+	print_sleep("In your hand you hold a hatchet, though it's a bit blunt.\n")
 	options()
 
 def options():
@@ -54,7 +54,7 @@ def drink_water():
 	print_sleep("As you are you bend down to drink, you see something glistening")
 	print_sleep(" in the water. You have found a magical sword!")
 	print_sleep("You rid yourself of your hatchet and take the sword.")
-	print_sleep("You head back to the jungle.")
+	print_sleep("You head back to the jungle.\n")
 	weapon = "Magical sword"
 	options()
 
