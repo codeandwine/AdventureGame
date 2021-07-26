@@ -17,7 +17,7 @@ def intro():
 	print_sleep("Beside the temple there is a roaring river.")
 	print_sleep("In your hand you hold a hatchet, though it's a bit blunt.")
 	print_sleep("Enter 1 to knock on the door of the Mayan Temple.")
-	print_sleep("Enter 2 to peep into the Mayan Temple.")
+	print_sleep("Enter 2 to drink some water from the river.")
 	print_sleep("(Please enter the numbers 1 or 2.)")
 
 	start = input()
@@ -38,7 +38,6 @@ def knock_on_door():
 	print_sleep("2. RUN AWAY!")
 
 	first_step = input()
-
 	if first_step == '1':
 		pierce_heart()
 	elif first_step == '2':
@@ -53,7 +52,6 @@ def pierce_heart():
 	print_sleep("Would you like to play again? (y/n)")
 
 	play_again = input()
-
 	if play_again == 'y':
 		intro()
 	elif play_again == 'n':
