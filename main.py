@@ -34,11 +34,11 @@ def options():
 
 
 def knock_on_door():
-	first_step = 0
+	first_step = '0'
 	print_sleep("You walk towards the weird door at the top of the Temple.")
-	print_sleep("You are about to reach the door when a grotesque looking {enemy} opens the door.")
+	print_sleep(f"You are about to reach the door when a grotesque looking {enemy} opens the door.")
 	print_sleep("Holy Molly! This is the evil spirit encarnate!")
-	print_sleep("The ugly {enemy} attacks you. You are quite unprepared for this!")
+	print_sleep(f"The ugly {enemy} attacks you. You are quite unprepared for this!")
 	print_sleep("What should you do?")
 	print_sleep("1. Use the hatchet to pierce his heart.")
 	print_sleep("2. RUN AWAY!")
@@ -61,11 +61,20 @@ def drink_water():
 
 def pierce_heart():
 	play_again = "x"
-	print_sleep("You do your best to aim at {enemy}'s heart.")
-	print_sleep("The human form of it is too swift and he evades your strike.")
-	print_sleep("He possesses your body and steals your soul!")
-	print_sleep("You have been defeated! :(")
-	print_sleep("Would you like to play again? (y/n)")
+
+	if weapon == "Hatchet":
+		print_sleep(f"You do your best to aim at {enemy}'s heart.")
+		print_sleep("The human form of it is too swift and he evades your strike.")
+		print_sleep("He possesses your body and steals your soul!")
+		print_sleep("You have been defeated! :(")
+		print_sleep("Would you like to play again? (y/n)")
+	elif weapon == "Magical Sword":
+		print_sleep(f"As the {enemy} makes a move at you, you take the {weapon}",
+					" and pierce his heart.")
+		print_sleep("The body collapses and the spirit ")
+		print_sleep("is thrown down into the underworld.")
+		print_sleep("You have rid the Mayan Temple of the evil spirit!")
+		print_sleep("You have won!")
 
 	play_again = input()
 	if play_again == 'y':
