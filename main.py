@@ -49,7 +49,7 @@ def knock_on_door(weapon):
 		run_away(weapon)
 
 def drink_water(weapon):
-	if weapon == "Magical sword":
+	if weapon == "Magical Sword":
 		print_sleep("You have been here before. You already found the Magical "
 					" sword. You drink some water.")
 	else:
@@ -57,7 +57,7 @@ def drink_water(weapon):
 		print_sleep("As you are you bend down to drink, you see something glistening")
 		print_sleep(" in the water. You have found a magical sword!")
 		print_sleep("You rid yourself of your hatchet and take the sword.")
-		weapon = "Magical sword"
+		weapon = "Magical Sword"
 
 	print_sleep("You head back to the jungle.\n")
 	options(weapon)
