@@ -6,7 +6,9 @@ import random
 def print_sleep(message):
 	print(message)
 	time.sleep(1.5) #change this line for the pauses
+
 def intro():
+	start = 0
 	print_sleep("You find you are in the Jungles of Belize, filled with Mayan witchcraft and supernatural creatures.")
 	print_sleep("Rumor has it that an evil sprit is still roaming the mountains.")
 	print_sleep("In front of you is a Mayan Temple.")
@@ -15,6 +17,14 @@ def intro():
 	print_sleep("Enter 1 to knock on the door of the Mayan Temple.")
 	print_sleep("Enter 2 to peep into the Mayan Temple.")
 	print_sleep("(Please enter the numbers 1 or 2.)")
+
+	start = input()
+
+	if start == 1:
+		knock_on_door()
+	elif start == 2:
+		peep()
+
 
 def knock_on_door():
 	first_step = 0
