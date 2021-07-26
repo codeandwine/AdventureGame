@@ -9,11 +9,11 @@ enemy = random.choice(enemies)
 def print_sleep(message):
     print(message)
     time.sleep(1.5)
-    # change this line for the pauses
+    # change ^ this line for the pauses
 
 
 def intro(weapon):
-    print_sleep("You find you are in the Jungles of Belize, filled with Mayan "
+    print_sleep("You find you are in the Jungle of Belize, filled with Mayan "
                 "witchcraft and supernatural creatures.")
     print_sleep("Rumor has it that an evil sprit is still roaming "
                 "the mountains.")
