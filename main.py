@@ -42,3 +42,18 @@ def knock_on_door():
 		pierce_heart()
 	elif first_step == 2:
 		run_away()
+
+def pierce_heart():
+	play_again = "x"
+	print_sleep("You do your best to aim at evil spirit's heart.")
+	print_sleep("The human form of it is too swift and he evades your strike.")
+	print_sleep("He possesses your body and steals your soul!")
+	print_sleep("You have been defeated! :(")
+	print_sleep("Would you like to play again? (y/n)")
+
+	play_again = input()
+
+	if play_again == 'y':
+		intro()
+	elif play_again == 'n':
+		bye()
