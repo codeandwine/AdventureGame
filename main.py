@@ -4,21 +4,20 @@ import random
 start = time.time()
 enemies = ['Death Spirit', 'Duende', 'Zipacná', 'Xibalba', 'Buluc Chabtan']
 enemy = random.choice(enemies)
-weapon = "Hatchet"
 
 def print_sleep(message):
 	print(message)
 	time.sleep(1.5) #change this line for the pauses
 
-def intro():
+def intro(weapon):
 	print_sleep("You find you are in the Jungles of Belize, filled with Mayan witchcraft and supernatural creatures.")
 	print_sleep("Rumor has it that an evil sprit is still roaming the mountains.")
 	print_sleep("In front of you is a Mayan Temple.")
 	print_sleep("Beside the temple there is a roaring river.")
 	print_sleep("In your hand you hold a hatchet, though it's a bit blunt.\n")
-	options()
+	options(weapon)
 
-def options():
+def options(weapon):
 	start = '0'
 	print_sleep("Enter 1 to knock on the door of the Mayan Temple.")
 	print_sleep("Enter 2 to drink some water from the river.")
@@ -26,40 +25,44 @@ def options():
 
 	start = input()
 	if start == '1':
-		knock_on_door()
+		knock_on_door(weapon)
 	elif start == '2':
-		drink_water()
+		drink_water(weapon)
 	else:
 		"You didn't enter the numbers specified!"
 
 
-def knock_on_door():
+def knock_on_door(weapon):
 	first_step = '0'
 	print_sleep("You walk towards the weird door at the top of the Temple.")
 	print_sleep(f"You are about to reach the door when a grotesque looking {enemy} opens the door.")
 	print_sleep("Holy Molly! This is the evil spirit encarnate!")
 	print_sleep(f"The ugly {enemy} attacks you. You are quite frightened about this!")
 	print_sleep("What should you do?")
-	print_sleep(f"1. Use the {weapon}} to pierce his heart.")
+	print_sleep(f"1. Use the {weapon} to pierce his heart.")
 	print_sleep("2. RUN AWAY!")
 
 	first_step = input()
 	if first_step == '1':
-		pierce_heart()
+		pierce_heart(weapon)
 	elif first_step == '2':
-		run_away()
+		run_away(weapon)
 
-def drink_water():
-	print_sleep("You walk towards the river bank. ")
-	print_sleep("As you are you bend down to drink, you see something glistening")
-	print_sleep(" in the water. You have found a magical sword!")
-	print_sleep("You rid yourself of your hatchet and take the sword.")
+def drink_water(weapon):
+	if weapon == "Magical sword":
+		print_sleep("You have been here before. You already found the Magical "
+					" sword. You drink some water.")
+	else:
+		print_sleep("You walk towards the river bank. ")
+		print_sleep("As you are you bend down to drink, you see something glistening")
+		print_sleep(" in the water. You have found a magical sword!")
+		print_sleep("You rid yourself of your hatchet and take the sword.")
+		weapon = "Magical sword"
+
 	print_sleep("You head back to the jungle.\n")
-	weapon = "Magical sword"
-	options()
+	options(weapon)
 
-
-def pierce_heart():
+def pierce_heart(weapon):
 	play_again = "x"
 
 	if weapon == "Magical Sword":
@@ -78,14 +81,16 @@ def pierce_heart():
 	print_sleep("Would you like to play again? (y/n)")
 	play_again = input()
 	if play_again == 'y':
-		intro()
+		weapon = "Hatchet"
+		intro(weapon)
 	elif play_again == 'n':
 		bye()
 
 def bye():
 	print_sleep("Thanks for playing! See you next time. :)")
 
-intro()
+weapon = "Hatchet"
+intro(weapon)
 
 end = time.time()
 print("The program took: {}".format(end-start))
