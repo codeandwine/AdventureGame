@@ -62,20 +62,20 @@ def drink_water():
 def pierce_heart():
 	play_again = "x"
 
-	if weapon == "Hatchet":
+	if weapon == "Magical Sword":
+		print_sleep(f"As the {enemy} makes a move at you, you take the {weapon}",
+					" and pierce his heart.")
+		print_sleep("The body collapses and the spirit ",
+					"is thrown down into the underworld.")
+		print_sleep("You have rid the Mayan Temple of the evil spirit!")
+		print_sleep("You have won!")
+	elif weapon == "Hatchet":
 		print_sleep(f"You do your best to aim at {enemy}'s heart.")
 		print_sleep("The human form of it is too swift and he evades your strike.")
 		print_sleep("He possesses your body and steals your soul!")
 		print_sleep("You have been defeated! :(")
-		print_sleep("Would you like to play again? (y/n)")
-	elif weapon == "Magical Sword":
-		print_sleep(f"As the {enemy} makes a move at you, you take the {weapon}",
-					" and pierce his heart.")
-		print_sleep("The body collapses and the spirit ")
-		print_sleep("is thrown down into the underworld.")
-		print_sleep("You have rid the Mayan Temple of the evil spirit!")
-		print_sleep("You have won!")
 
+	print_sleep("Would you like to play again? (y/n)")
 	play_again = input()
 	if play_again == 'y':
 		intro()
