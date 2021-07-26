@@ -4,6 +4,7 @@ import random
 start = time.time()
 enemies = ['Death Spirit', 'Duende', 'Zipacná', 'Xibalba', 'Buluc Chabtan']
 enemy = random.choice(enemies)
+weapon = "Hatchet"
 
 def print_sleep(message):
 	print(message)
@@ -24,7 +25,7 @@ def intro():
 	if start == '1':
 		knock_on_door()
 	elif start == '2':
-		peep()
+		drink_water()
 
 
 def knock_on_door():
@@ -42,6 +43,16 @@ def knock_on_door():
 		pierce_heart()
 	elif first_step == '2':
 		run_away()
+
+def drink_water():
+	print_sleep("You walk towards the river bank. ")
+	print_sleep("As you are you bend down to drink, you see something glistening")
+	print_sleep(" in the water. You have found a magical sword!")
+	print_sleep("You rid yourself of your hatchet and take the sword.")
+	print_sleep("You head back to the jungle.")
+	weapon = "Magical sword"
+	options()
+
 
 def pierce_heart():
 	play_again = "x"
