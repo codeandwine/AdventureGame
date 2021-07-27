@@ -4,9 +4,9 @@ import random
 start = time.time()
 
 
-def print_sleep(message, time):
+def print_sleep(message, seconds):
     print(message)
-    time.sleep(time)
+    time.sleep(seconds)
     # change ^ this line for the pauses
 
 
@@ -18,7 +18,7 @@ def intro(weapon, enemy):
     print_sleep("In front of you is a Mayan Temple.", 1)
     print_sleep("Beside the temple there is a roaring river.", 1)
     print_sleep("In your hand you hold a hatchet, though it's a bit blunt.\n", 2)
-    options(weapon)
+    options(weapon, enemy)
 
 
 def options(weapon, enemy):
@@ -27,7 +27,7 @@ def options(weapon, enemy):
     print_sleep("Enter 2 to drink some water from the river.", 1)
 
     while start not in ['1', '2']:
-        start = input("(Please enter the numbers 1 or 2.)\n", 1.5)
+        start = input("(Please enter the numbers 1 or 2.)\n")
 
         if start == '1':
             knock_on_door(weapon, enemy)
@@ -48,7 +48,7 @@ def knock_on_door(weapon, enemy):
     print_sleep("2. RUN AWAY!", 1)
 
     while first_step not in ['1', '2']:
-        first_step = input("(Please enter the numbers 1 or 2.)\n", 1)
+        first_step = input("(Please enter the numbers 1 or 2.)\n")
 
         if first_step == '1':
             pierce_heart(weapon, enemy)
@@ -95,7 +95,7 @@ def pierce_heart(weapon, enemy):
         print_sleep("You have been defeated! :(", 1.5)
 
     while play_again not in ['y', 'n']:
-        play_again = input("Would you like to play again? (y/n)\n", 1).lower()
+        play_again = input("Would you like to play again? (y/n)\n").lower()
 
         if play_again == 'y':
             print_sleep("Fantastic! Let's take you back...\n", 2)
