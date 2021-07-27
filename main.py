@@ -59,6 +59,7 @@ def final_choice(weapon, enemy):
             intro(weapon, enemy)
         elif play_again == 'n':
             bye()
+            exit(0)
 
 
 def options(weapon, enemy):
@@ -122,13 +123,10 @@ def pierce_heart(weapon, enemy):
 
 def bye():
     print_sleep("Thanks for playing! See you next time. :)", 1)
-    exit(0)
-
+    end = time.time()
+    print("The game ran for: {}".format(end-start), "seconds.")
 
 enemies = ['Death Spirit', 'Duende', 'Zipacná', 'Xibalba', 'Buluc Chabtan']
 enemy = random.choice(enemies)
 weapon = "Hatchet"
 intro(weapon, enemy)
-
-end = time.time()
-print("The game ran for: {}".format(end-start), " seconds.")
