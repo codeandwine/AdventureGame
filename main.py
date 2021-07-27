@@ -115,4 +115,4 @@ weapon = "Hatchet"
 intro(weapon, enemy)
 
 end = time.time()
-print("The program took: {}".format(end-start))
+print("The game ran for: {}".format(end-start), " seconds.")
