@@ -35,7 +35,7 @@ def first_choice(weapon, enemy):
 
 def second_choice(weapon, enemy):
     sec_step = '0'
-    while first_step not in ['1', '2']:
+    while sec_step not in ['1', '2']:
         sec_step = input("(Please enter the numbers 1 or 2.)\n")
 
         if sec_step == '1':
@@ -45,6 +45,7 @@ def second_choice(weapon, enemy):
 
 
 def final_choice(weapon, enemy):
+    play_again = "x"
     while play_again not in ['y', 'n']:
         play_again = input("Would you like to play again? (y/n)\n").lower()
 
@@ -102,8 +103,6 @@ def run_away(weapon, enemy):
 
 
 def pierce_heart(weapon, enemy):
-    play_again = "x"
-
     if weapon == "Magical Sword":
         print_sleep(f"As the {enemy} makes a move at you, you take the "
                     f"{weapon} and pierce his heart.", 2)
