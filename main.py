@@ -27,7 +27,7 @@ def valid_input(instructions, options):
         option = input(instructions).lower()
         if option in options:
             return option
-        print_pause(f"Sorry, {option} is an invalid input. Try again!\n")
+        print_pause(f"Sorry, {option} is an invalid input. Try again!\n", 1.5)
 
 
 def first_choice(weapon, enemy):
@@ -74,7 +74,7 @@ def knock_on_door(weapon, enemy):
     print_pause("You walk towards the weird door at the top of the Temple.", 1)
     print_pause(f"You are about to reach the door when a grotesque looking "
                 f"{enemy} opens the door.", 2)
-    print_pause("Holy Molly! This is the evil spirit encarnate!", 1.5)
+    print_pause("Holy Molly! This is the evil spirit incarnate!", 1.5)
     print_pause(f"The ugly {enemy} attacks you. You are quite frightened "
                 "about this!", 1)
     print_pause("What should you do?", 1)
