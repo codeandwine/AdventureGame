@@ -49,7 +49,8 @@ def second_choice(weapon, enemy):
 
 
 def final_choice(weapon, enemy):
-    play_again = valid_input("Would you like to play again? (y/n)\n", ['y', 'n'])
+    play_again = valid_input("Would you like to play again? (y/n)\n",
+                             ['y', 'n'])
 
     if play_again == 'y':
         print_pause("Fantastic! Let's take you back...\n", 2)
@@ -123,11 +124,13 @@ def bye():
     end = time.time()
     print("The game ran for: {}".format(end-start), "seconds.")
 
+
 def game():
     enemies = ['Death Spirit', 'Duende', 'Zipacná', 'Xibalba', 'Buluc Chabtan']
     enemy = random.choice(enemies)
     weapon = "Hatchet"
     intro(weapon, enemy)
+
 
 if __name__ == '__main__':
     game()
