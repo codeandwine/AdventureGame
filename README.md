@@ -41,7 +41,23 @@ def game():
 
 <br>
 
-## 3. if else usage
+## 3. An example from all the if elses used
+
+In this example, you can see that if you've visited this function before, it will print something different than if you haven't. Notice also the change of weapon when visiting this function for the first time.
+
+```Python
+def drink_water(weapon, enemy):
+    if weapon == "Magical Sword":
+        print_pause("You have been here before. You already found the Magical "
+                    "sword. You drink some water.", 1)
+    else:
+        print_pause("You walk towards the river bank. ", 1.5)
+        print_pause("As you bend down to drink, you see something glistening "
+                    "in the water. You have found a magical sword!", 1.5)
+        print_pause("You rid yourself of your hatchet and take the sword.", 2)
+        weapon = "Magical Sword"
+```
+
 
 <br>
 
