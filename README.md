@@ -79,6 +79,25 @@ def pierce_heart(weapon, enemy):
 
 ## 5. while loop usage with implicit joining for list provided
 
+The while loops is used here to handle faulty inputs by user. 
+
+The variable options is in charge to implicitly join all options provided when passing a list to that variable. This is to allow the change in amount or type of options that want to be given/used in other functions. As it is noted, the function first_choice passes the list containing 1 and 2 as options of inputs to be accepted.
+
+```Python
+def valid_input(instructions, options):
+    while True:
+        option = input(instructions).lower()
+        if option in options:
+            return option
+        print_pause(f"Sorry, {option} is an invalid input. Try again!\n", 1.5)
+
+
+def first_choice(weapon, enemy):
+    start = valid_input("(Please enter the numbers 1 or 2.)\n", ['1', '2'])
+    ...
+```
+
+
 <br>
 
 ## 6. Choices affect path of game
