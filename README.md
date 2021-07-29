@@ -102,6 +102,20 @@ def first_choice(weapon, enemy):
 
 ## 6. Choices affect path of game
 
+The function secon_choice uses if/else to guide the game in different directions depending on the user's input.
+
+```Python
+def second_choice(weapon, enemy):
+    sec_step = valid_input("(Please enter the numbers 1 or 2.)\n", ['1', '2'])
+
+    if sec_step == '1':
+        pierce_heart(weapon, enemy)
+    elif sec_step == '2':
+        run_away(weapon, enemy)
+    ...
+```
+
+
 <br>
 
 ## 7. Refactoring of code
