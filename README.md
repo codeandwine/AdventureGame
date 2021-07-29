@@ -28,7 +28,7 @@ def print_pause(message, seconds):
 
 ## 2. Using random.choice method
 
-The game() was defined to have 3 variables inside. One contains a list of 'evil' spirits from the Mayan superstitions in Central America. Using the choice method found in random, it helps to randomly select an evil spirit to start the game each time the function game is called. The weapon is also passed into intro, as that is part of the 'randomness' of the game. 
+The game() was defined to have 3 variables inside. One contains a list of 'evil' spirits from the Mayan superstitions in Central America. Using the choice method found in random, it helps to randomly select an evil spirit as an enemy to start the game each time the function game is called. The weapon and enemy are passed into intro, as that is part of the 'randomness' of the game. 
 
 ```Python
 def game():
