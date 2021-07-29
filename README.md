@@ -56,6 +56,7 @@ def drink_water(weapon, enemy):
                     "in the water. You have found a magical sword!", 1.5)
         print_pause("You rid yourself of your hatchet and take the sword.", 2)
         weapon = "Magical Sword"
+    ...
 ```
 
 
@@ -63,6 +64,17 @@ def drink_water(weapon, enemy):
 
 ## 4. print and 'f' prints
 
+Sample code showing printing strings of text and fprints of strings that include variables enclosed in {}
+
+```Python
+def pierce_heart(weapon, enemy):
+    if weapon == "Magical Sword":
+        print_pause(f"As the {enemy} makes a move at you, you take the "
+                    f"{weapon} and pierce his heart.", 2)
+        print_pause("The body collapses and the spirit "
+                    "is thrown down into the underworld.", 1.5)
+    ...
+```
 <br>
 
 ## 5. while loop usage with implicit joining for list provided
