@@ -1,9 +1,10 @@
 # Adventure Game
 # Introduction 
 
-This a simple project that tests the following skills being used:
+Adventure Game is a simple project that tests the skills below being used. This short game basically provides some output, the user chooses an option, and different events happen, depending on the user's choice. 
 <br>
 ## 1. time.sleep function usage
+
 
 <br>
 
