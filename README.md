@@ -3,7 +3,25 @@
 
 Adventure Game is a simple project that tests the skills below being used. This short game basically provides some output, the user chooses an option, and different events happen, depending on the user's choice. 
 <br>
-## 1. time.sleep function usage
+## 1. Using time.sleep method
+
+"time" was imported to be able to calculate the time for which the game is run.
+
+```Python
+import time
+start = time.time()
+.
+.
+.
+end = time.time()
+```
+It is also used to control the pauses between the printing of each message by calling on the sleep method.
+
+```Python
+def print_pause(message, seconds):
+    print(message)
+    time.sleep(seconds)
+```
 
 
 <br>
