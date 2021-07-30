@@ -142,12 +142,11 @@ def valid_input(instructions, options):
 Other changes included changing the enemy and weapon variables from being global variables. Instead they're introduced as part of the game function that begins the journey of the connected functions. 
 
 ```Python
-def valid_input(instructions, options):
-    while True:
-        option = input(instructions).lower()
-        if option in options:
-            return option
-        print_pause(f"Sorry, {option} is an invalid input. Try again!\n", 1.5)    
+def game():
+    enemies = ['Death Spirit', 'Duende', 'Zipacná', 'Xibalba', 'Buluc Chabtan']
+    enemy = random.choice(enemies)
+    weapon = "Hatchet"
+    intro(weapon, enemy) 
  ```
  
  Other changes can be noted between tags of v1.0 and v2.0
@@ -155,6 +154,7 @@ def valid_input(instructions, options):
 
 ## 8. pycodestyle checks done
 
+No news is good news.
 ![pycheck.png](https://github.com/codeandwine/AdventureGame/blob/main/pycheck.png)
 <br>
 
