@@ -159,3 +159,5 @@ def valid_input(instructions, options):
 <br>
 
 ## 9. Running from start to finish without crashing
+
+Well you can test that yourself ;)
