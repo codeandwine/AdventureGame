@@ -120,7 +120,7 @@ def second_choice(weapon, enemy):
 
 ## 7. Refactoring of code
 
-The first evidence of refactoring is creating the function print_pause() as pausing is code used many throughout and would increase the length of the program significantly if done individually. 
+The first evidence of refactoring is creating the function print_pause() as pausing is code used throughout and would increase the length of the program significantly if done individually. 
 
 ```Python
 def print_pause(message, seconds):
@@ -139,7 +139,7 @@ def valid_input(instructions, options):
         print_pause(f"Sorry, {option} is an invalid input. Try again!\n", 1.5)
 ```
 
-Other changes included changing the enemy and weapon variables from being global variables. Instead they're introduced as part of the game function that begins the journey of the connected funcitons. 
+Other changes included changing the enemy and weapon variables from being global variables. Instead they're introduced as part of the game function that begins the journey of the connected functions. 
 
 ```Python
 def valid_input(instructions, options):
