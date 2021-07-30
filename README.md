@@ -102,7 +102,7 @@ def first_choice(weapon, enemy):
 
 ## 6. Choices affect path of game
 
-The function secon_choice uses if/else to guide the game in different directions depending on the user's input.
+The function second_choice uses if/else to guide the game in different directions depending on the user's input.
 
 ```Python
 def second_choice(weapon, enemy):
@@ -120,6 +120,37 @@ def second_choice(weapon, enemy):
 
 ## 7. Refactoring of code
 
+The first evidence of refactoring is creating the function print_pause() as pausing is code used many throughout and would increase the length of the program significantly if done individually. 
+
+```Python
+def print_pause(message, seconds):
+    print(message)
+    time.sleep(seconds)
+```
+
+The second valuable function is the one containing the while loop that deals with inadequate input. This refactoring allows for it to be used when entering strings of numbers or letters in different parts of the game.
+
+```Python
+def valid_input(instructions, options):
+    while True:
+        option = input(instructions).lower()
+        if option in options:
+            return option
+        print_pause(f"Sorry, {option} is an invalid input. Try again!\n", 1.5)
+```
+
+Other changes included changing the enemy and weapon variables from being global variables. Instead they're introduced as part of the game function that begins the journey of the connected funcitons. 
+
+```Python
+def valid_input(instructions, options):
+    while True:
+        option = input(instructions).lower()
+        if option in options:
+            return option
+        print_pause(f"Sorry, {option} is an invalid input. Try again!\n", 1.5)    
+ ```
+ 
+ Other changes can be noted between tags of v1.0 and v2.0
 <br>
 
 ## 8. pycodestyle checks done
